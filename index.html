@@ -190,8 +190,92 @@
   footer{text-align:center;padding:4rem 2rem;border-top:1px solid var(--line);
     font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.2em;color:var(--mist)}
 
+  /* ---------- PART II : 覺醒 ---------- */
+  .part-break{
+    text-align:center;padding:14vw 7vw 11vw;position:relative;overflow:hidden;
+    background:linear-gradient(180deg,#f4eede 0%,#eef3ec 100%);
+  }
+  .part-break .ring{
+    position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+    width:42vw;height:42vw;max-width:520px;max-height:520px;border-radius:50%;
+    border:1px solid rgba(47,115,97,.25);
+  }
+  .part-break .ring.r2{width:30vw;height:30vw;max-width:380px;max-height:380px;
+    border-color:rgba(200,64,29,.22)}
+  .part-break .ring.r3{width:18vw;height:18vw;max-width:230px;max-height:230px;
+    border-color:rgba(47,115,97,.4);animation:spin 24s linear infinite}
+  @keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+  .part-break .pulse{position:absolute;left:50%;top:50%;width:10px;height:10px;
+    margin:-5px 0 0 -5px;border-radius:50%;background:var(--cinnabar);
+    box-shadow:0 0 0 0 rgba(200,64,29,.4);animation:pulse 2.6s ease-out infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(200,64,29,.4)}100%{box-shadow:0 0 0 60px rgba(200,64,29,0)}}
+  .part-break .label{position:relative;z-index:2;font-family:'Space Mono',monospace;
+    font-size:.78rem;letter-spacing:.45em;color:var(--jade);text-transform:uppercase;
+    margin-bottom:1.8rem}
+  .part-break h2.big{position:relative;z-index:2;font-family:'Noto Serif TC',serif;
+    font-weight:900;font-size:clamp(2.2rem,6vw,4.4rem);line-height:1.25;color:var(--ink);
+    margin:0;border:none}
+  .part-break h2.big .jd{color:var(--jade)}
+
+  .awake{background:linear-gradient(180deg,#eef3ec 0%,#f3f5ef 100%)}
+  .awake .sec-num{color:var(--jade)}
+  .awake h2 em{color:var(--jade)}
+  .awake .pull{border-left-color:var(--jade)}
+  .awake .term{color:var(--cinnabar)}
+
+  /* energy split */
+  .energy{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);
+    border:1px solid var(--line);border-radius:6px;overflow:hidden;margin:3rem 0;max-width:900px;
+    box-shadow:0 18px 40px -28px rgba(43,38,32,.4)}
+  .energy .head{padding:1.1rem 1.5rem;font-family:'Space Mono',monospace;
+    font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;background:var(--cream)}
+  .energy .head.low{color:var(--mist)}
+  .energy .head.high{color:var(--jade)}
+  .energy .cell{padding:1.6rem 1.5rem;background:var(--paper-2);font-size:.98rem;line-height:1.85}
+  .energy .cell.low{color:var(--ink-soft)}
+  .energy .cell.high{color:var(--ink)}
+  .energy .cell .big-w{display:block;font-family:'Noto Serif TC',serif;font-weight:700;
+    font-size:1.15rem;margin-bottom:.5rem}
+  .energy .cell.low .big-w{color:var(--mist)}
+  .energy .cell.high .big-w{color:var(--jade)}
+
+  /* jung quote block */
+  .jung{margin:3.5rem auto;max-width:820px;text-align:center;padding:0 1rem}
+  .jung .q{font-family:'Noto Serif TC',serif;font-weight:500;font-style:italic;
+    font-size:clamp(1.3rem,3vw,2rem);line-height:1.55;color:var(--ink)}
+  .jung .en{font-family:'Space Mono',monospace;font-size:.86rem;color:var(--ink-soft);
+    margin-top:1.2rem;line-height:1.7}
+  .jung .who{font-family:'Space Mono',monospace;font-size:.78rem;letter-spacing:.2em;
+    color:var(--cinnabar);margin-top:1.4rem;text-transform:uppercase}
+
+  /* responsibility decode */
+  .decode{display:flex;flex-wrap:wrap;align-items:stretch;gap:1rem;margin:3rem 0;max-width:820px}
+  .decode .piece{flex:1 1 200px;background:var(--paper-2);border:1px solid var(--line);
+    border-radius:6px;padding:1.6rem 1.4rem;box-shadow:0 12px 30px -28px rgba(43,38,32,.5)}
+  .decode .piece .w{font-family:'Space Mono',monospace;font-size:1.05rem;color:var(--cinnabar);
+    font-weight:700;margin-bottom:.5rem;letter-spacing:.05em}
+  .decode .piece .m{color:var(--ink-soft);font-size:.95rem;line-height:1.8}
+  .decode .plus{display:flex;align-items:center;font-family:'Noto Serif TC',serif;
+    font-weight:900;font-size:2rem;color:var(--jade)}
+
+  /* now / time triad */
+  .triad{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin:3rem 0}
+  .triad .t{background:var(--paper-2);border:1px solid var(--line);border-radius:8px;
+    padding:2rem 1.6rem;box-shadow:0 14px 36px -30px rgba(43,38,32,.5);position:relative;overflow:hidden}
+  .triad .t .ttl{font-family:'Noto Serif TC',serif;font-weight:700;font-size:1.25rem;
+    color:var(--ink);margin-bottom:.8rem}
+  .triad .t .ttl.fade{color:var(--mist)}
+  .triad .t .ttl.now{color:var(--cinnabar)}
+  .triad .t p{font-size:.95rem;color:var(--ink-soft);margin:0;line-height:1.85}
+
   .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}
   .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:680px){
+    .energy{grid-template-columns:1fr}
+    .triad{grid-template-columns:1fr}
+    .decode .plus{display:none}
+  }
 
   @media(max-width:680px){
     .compare{grid-template-columns:1fr}
@@ -225,7 +309,7 @@
   <div class="hero-inner">
     <div class="kicker">Neuroplasticity × 業障說</div>
     <h1 class="hero-title">不是<span class="strike">業障</span>一直來，<br>而是你的大腦<br><span class="glow">舊迴路</span>該升級了。</h1>
-    <p class="hero-sub">那些重複發生的卡關與不順，不是前世的懲罰，而是腦神經正在施工的陣痛。用現代神經科學，重新拆解一個讓人無能為力的古老說法。</p>
+    <p class="hero-sub">那些重複發生的卡關與不順，不是前世的懲罰，而是腦神經正在施工的陣痛。從現代神經科學一路走到內在主權的覺醒——重新拆解一個讓人無能為力的古老說法，把生命的遙控器拿回自己手上。</p>
     <div class="hero-eq">
       <span>業障</span><span class="op">=</span><span>習性</span><span class="op">=</span><span>從小累積的行為模式</span>
     </div>
@@ -334,7 +418,112 @@
   <div class="finale-tag">大腦不聽你的命令，大腦只聽你的行為</div>
 </section>
 
-<footer>NEUROPLASTICITY · 神經可塑性 · 你就是自己大腦的工程師</footer>
+<!-- ===================== PART II ===================== -->
+<section class="part-break reveal">
+  <div class="ring"></div>
+  <div class="ring r2"></div>
+  <div class="ring r3"></div>
+  <div class="pulse"></div>
+  <div class="label">Part II — 主權回歸</div>
+  <h2 class="big">當主權回到自己身上，<br>你<span class="jd">本自具足</span>。</h2>
+</section>
+
+<section class="awake reveal">
+  <div class="sec-num">04 — 內在主權</div>
+  <h2>主權外求，還是<em>主權在手</em>？</h2>
+  <p class="lead body">把「業障＝舊神經迴路＝舊習性」推導到極致，你會發現「內在主權」與「本自具足」不再是宗教裡安慰人的口號，而是清清楚楚的物理事實。</p>
+
+  <p class="body"><strong>相信業障說，是主權外求。</strong>你把人生的「解釋權」交給了過去、交給了前世、交給了看不見的力量。命運不順時，內心潛台詞是「這不是我的錯，是業障在整我」。這本質上是一種主權的割讓，讓你變成自己生命裡的受害者與乞討者。</p>
+
+  <p class="body"><strong>認清神經可塑性，是主權在手。</strong>你突然意識到，那個卡住你的境遇，不過是大腦硬體裡一條舊溝渠。既然是我過去重複一萬次踩出來的，那我就有能力在接下來重複一萬次，踩出一條新的康莊大道。命運的遙控器，就在你每一次面對刺激時的「解讀選擇」裡。</p>
+
+  <div class="pull reveal"><p>你不需要任何人恩賜、不需要神明特赦。你現有的這顆大腦，就內建了重組、重寫、自我療癒的所有生理潛能。</p></div>
+
+  <p class="body"><strong>科學硬核版的「本自具足」。</strong>你的大腦在出生時就內建了<span class="term">神經可塑性</span>——硬體施工的能力。你不需要向外尋求救贖，你本身就是那個能調動上千億神經元、重新編織命運的總工程師。你缺乏的從來不是能力，而是「覺察到自己正在開舊車」的意識。</p>
+</section>
+
+<div class="divider"></div>
+
+<section class="awake reveal">
+  <div class="sec-num">05 — 100% 的責任</div>
+  <h2>為自己負全責，<em>不是</em>千錯萬錯都是我的錯</h2>
+  <p class="lead body">很多人聽到「為自己負 100% 的責任」會感到沉重，覺得那意味著自我責備。但這兩者的能量狀態，有著天壤之別。</p>
+
+  <div class="decode reveal">
+    <div class="piece"><div class="w">Response</div><div class="m">回應 —— 他人怎麼對你、環境怎麼變動，那是你無法控制的「刺激」。</div></div>
+    <div class="plus">+</div>
+    <div class="piece"><div class="w">Ability</div><div class="m">能力 —— 但你用什麼角度解讀、用什麼行為回應，是你 100% 可掌控的能力。</div></div>
+  </div>
+  <p class="body">Responsibility(負責任)的字根,正是 Response(回應)＋ Ability(能力)——也就是「回應的能力」。真正的負責,從來不是認錯。</p>
+
+  <div class="energy reveal">
+    <div class="head low">低能量 · 自我批判</div>
+    <div class="head high">高能量 · 宣告主權</div>
+    <div class="cell low"><span class="big-w">千錯萬錯都是我的錯</span>把外在批判拿來懲罰自己,潛台詞是「我很糟、我是失敗者」。大腦陷入防禦與沮喪的舊迴路,能量縮小、委靡、沉重。</div>
+    <div class="cell high"><span class="big-w">我為自己負 100% 責任</span>對宇宙宣告:過去發生什麼我不管,從這一秒起,我要怎麼解讀、怎麼過人生,我說了算。能量擴展、篤定,排山倒海而來。</div>
+  </div>
+
+  <p class="body">當你不再怪罪父母的童年制約、不再怪罪主管的刁難、不再怪罪命運的捉弄,你就不再受任何人擺佈。小人再也傷不到你,因為新迴路會把他解讀成「免費的磨刀石」;困境再也卡不住你,因為新迴路會把它解讀成「系統升級的提示音」。</p>
+
+  <div class="pull reveal"><p>當你 100% 為自己的解讀負責,全天下就再也沒有任何人事物,有理由讓你感到受苦。</p></div>
+</section>
+
+<div class="divider"></div>
+
+<section class="awake reveal">
+  <div class="sec-num">06 — 成為自己</div>
+  <h2>人類最重要的核心,就是<em>成為自己</em></h2>
+  <p class="lead body">那些從小累積的習性、舊行為模式,就是潛意識裡的「大腦自動導航」。如果不轉念、不負責,我們一輩子都在當這具舊大腦的傀儡,活在別人設定好的劇本裡。</p>
+
+  <div class="jung reveal">
+    <p class="q">「除非你將潛意識意識化,<br>否則它將指引你的人生,而你稱其為命運。」</p>
+    <p class="en">Until you make the unconscious conscious,<br>it will direct your life and you will call it fate.</p>
+    <p class="who">Carl Jung · 卡爾 · 榮格</p>
+  </div>
+
+  <p class="body">當你開始<strong>覺察</strong>舊有模式的卡關、<strong>轉念</strong>用新的角度去解讀、<strong>負責</strong>百分之百掌控自己的反應,你就是在把那些沉睡的潛意識,一口口奪回來變成清醒的意識,把那些被習性綁架的神經荒地,一寸寸重新插上你自己的旗幟。</p>
+
+  <p class="body">成為自己,不是去變成一個完美的人,而是成為那個能全權擺平自己人生、在任何境遇下都能自由選擇解讀視角的——<strong>絕對創造者</strong>。</p>
+</section>
+
+<div class="divider"></div>
+
+<section class="awake reveal">
+  <div class="sec-num">07 — 活在當下</div>
+  <h2>我不是我,<em>但也是我</em></h2>
+  <p class="lead body">「我不是我,但也是我,我是此時此刻當下的我。」這句話不是繞口令,而是最硬核的生理與物理事實。</p>
+
+  <p class="body"><strong>上一秒的你,已經不存在了。</strong>大腦神經元在這一秒內進行了數十億次的電位交換與神經遞質分泌。你剛讀完上一秒的字,大腦就因接收新訊息而微調了突觸的連結。從物理結構上來說,上一秒那個大腦已經死去,現在是一顆全新升級的大腦。</p>
+
+  <p class="body"><strong>那為什麼痛苦如此真實?</strong>因為大腦會把創傷當下的恐懼訊號,像「拍照存檔」一樣刻在<span class="term">杏仁核</span>裡。當你今天遇到類似的人事物,大腦就把舊照片調出來,分泌一模一樣的壓力荷爾蒙。你的身體在這一秒流著恐懼的汗,讓你誤以為那個受苦的我還很真實。</p>
+
+  <p class="body"><strong>但你已經看穿了這個騙局。</strong>痛苦的經驗是真實的沒錯,那是因為大腦的硬碟留著紀錄;但那個正在受苦的「人」,早就留在過去的時空裡,根本沒有跟著你來到現在。</p>
+
+  <div class="triad reveal">
+    <div class="t">
+      <div class="ttl fade">我不是我</div>
+      <p>我不受過去的歷史所定義。過去的我再痛苦、再多習性,都只是過去的事,不代表現在的我。這是徹底的自由。</p>
+    </div>
+    <div class="t">
+      <div class="ttl">但也是我</div>
+      <p>過去的那個我,像一個辛勤的工人,用血淚與經驗,把生命之火一路傳遞到此刻,交給了現在的我。這是深刻的接納與感謝。</p>
+    </div>
+    <div class="t">
+      <div class="ttl now">當下的我</div>
+      <p>上一秒慣性想生氣(舊迴路);但這一秒是全新的你,擁有絕對自由去選擇換個角度解讀。這是創造。</p>
+    </div>
+  </div>
+
+  <div class="pull reveal"><p>在當下,過去的業障對你毫無辦法,它只是硬碟裡一串死資料。只要你此刻做出新的選擇,就在這個瞬間,創造了一個發光的新自己。</p></div>
+</section>
+
+<section class="finale reveal">
+  <div class="glow2"></div>
+  <p class="finale-q">把所有的痛苦,<br>都留在它該去的地方——<br><span class="hl">那個已經不存在的過去。</span></p>
+  <div class="finale-tag">此時此刻 · 你就是自己世界的絕對創造者</div>
+</section>
+
+<footer>NEUROPLASTICITY · 神經可塑性 · 內在主權 · 本自具足 · 活在當下</footer>
 
 <script>
   const io=new IntersectionObserver((es)=>{
